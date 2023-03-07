@@ -1,0 +1,22 @@
+version: '3.1'
+
+services:
+    postgress: 
+        image: postgres:alpine
+        container_name: dbpostgress 
+        restart: always 
+        ports: 
+            - 5432:5432 
+        env_file: /backend/.env
+        volumes:
+            - dbquize_volume:/var/lib/postgresql/data 
+        networks:
+            - dbquize_network 
+
+volumes:
+    dbquize_volume:
+        external: true
+
+networks:
+    dbquize_network:
+        external: true

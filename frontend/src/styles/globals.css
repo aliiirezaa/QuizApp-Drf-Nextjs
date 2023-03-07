@@ -1,0 +1,51 @@
+@import url('https://v1.fontapi.ir/css/Sahel:300;600;700');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .section {
+        @apply relative px-[32px] py-[22px]
+    }
+   .activeInfoBox {
+    animation: infoBox 0.5s ease-in;
+   }
+   .next--button{
+    opacity: 0;
+    pointer-events:none;
+   }
+   .active_next_button{
+        opacity: 1;
+        pointer-events: visible;
+   }
+   .disable {
+     pointer-events: none;
+    
+   }
+   
+  
+  
+
+}   
+
+
+* {
+    direction: rtl;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: Sahel, sans-serif;
+   
+}
+body::-webkit-scrollbar{
+    width: 10px;
+    border-radius: 8px;
+    background-color: #81D4FA;
+}
+body::-webkit-scrollbar-thumb{
+    width: 20px;
+    height: 20px;
+    border-radius:8px;
+    background-color: #0288D1;
+}
